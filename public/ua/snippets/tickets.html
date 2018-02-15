@@ -1,0 +1,116 @@
+<div class="container-logo margin-bottom">
+    <a href="/index.html" class="logo logo-black"></a>
+</div>
+
+<button id="tickets-close" class="menu-button color-black"><i class="fa fa-close fa-3x"></i></button>
+
+<div class="container-overlay">
+    <h1 class="margin-bottom"><span id="amount">0</span> грн</h1>
+    <h3 class="margin-bottom uppercase">количество билетов</h3>
+
+    <div class="margin-bottom-2x">
+        <button id="remove"   class="quantity-button"><i class="fa fa-minus fa-2x"></i></button>
+        <span   id="quantity" class="quantity">0</span>
+        <button id="add"      class="quantity-button"><i class="fa fa-plus fa-2x"></i></button>
+    </div>
+
+    <button id="form-open" class="button button-black margin-bottom uppercase">продолжить</button>
+</div>
+
+<script>
+    // Global object
+    window.cart = {
+        eventId: 1,
+        alias: 'funK',
+        quantity: 1,
+        price: 100,
+        consumer: {
+            name: '',
+            phone: '',
+            email: ''
+        }
+    };
+
+    // Add, remove/methods
+    $(document).ready(function() {
+        $('#remove').attr('disabled', 'disabled');
+        $('#quantity').html(window.cart.quantity);
+        $('#amount').html(window.cart.quantity * window.cart.price);
+
+        $('#add').click(function () {
+            $('#remove, #form-open').attr('disabled', false);
+            window.cart.quantity +=1;
+            amountChange()
+        });
+
+        $('#remove').click(function () {
+            if (window.cart.quantity > 1) {
+                window.cart.quantity -=1;
+                amountChange();
+            }
+
+            if (window.cart.quantity === 1) {
+                $('#remove').attr('disabled', 'disabled');
+            }
+        });
+
+        function amountChange() {
+            $('#quantity, #amount').animate({
+                opacity: '0'
+            }, 100, function () {
+                $('#quantity').html(window.cart.quantity);
+                $('#amount').html(window.cart.quantity * window.cart.price);
+
+                $('#quantity, #amount').animate({
+                    opacity: '1'
+                }, 100, function () { });
+            });
+        }
+    });
+
+    // Menu animation
+    $(document).ready(function() {
+        $('#tickets-open').click(function () {
+            $('#tickets').animate({
+                height: '100%'
+            }, 500, function () {
+                document.getElementById('tickets-close').style.display = 'block';
+
+                $('.container-overlay').animate({
+                    opacity: '1'
+                }, 500, function () {
+                    document.getElementById('form').style.height = '0%';
+                    document.getElementById('menu').style.height = '0%';
+                });
+            });
+        });
+
+        $('#form-open').click(function () {
+            $('#form').animate({
+                height: '100%'
+            }, 500, function () {
+                document.getElementById('form-close').style.display = 'block';
+
+                $('.container-overlay').animate({
+                    opacity: '1'
+                }, 500, function () {
+                    document.getElementById('tickets').style.height = '0%';
+                    document.getElementById('menu').style.height = '0%';
+                });
+            });
+        });
+
+        $('#tickets-close').click(function () {
+            $('.container-overlay').animate({
+                opacity: '0'
+            }, 500, function () {
+
+                $('#tickets').animate({
+                    height: '0%'
+                }, 500, function () {
+                    document.getElementById('tickets-close').style.display = 'none';
+                });
+            });
+        });
+    });
+</script>

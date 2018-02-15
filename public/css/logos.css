@@ -1,0 +1,9 @@
+.event-logo {
+
+}
+
+@media (max-width: 500px) {
+	.event-logo {
+		max-width: 300px;
+	}
+}

@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:300,400,700');
+
+@font-face {
+    font-family: 'Arctika';
+    src: url('../fonts/arctika-script.ttf') format('ttf'),
+         url('../fonts/arctika-script.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #F5F1ED;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-family: 'Arctika', sans-serif;
+    letter-spacing: 12px;
+    font-weight: 700;
+    font-size: 98px;
+    line-height: 76px;
+
+    margin: 0;
+
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2BDEFF;
+
+    text-shadow: 5px 1px 20px black, 0 0 1em #2BDEFF; /* Параметры тени */
+}
+
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 40px;
+
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 5px;
+
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+
+    margin: 0;
+}
+
+input {
+    width: 60%;
+    text-align: center;
+    padding: 12px;
+    background-color: #F5F1ED;
+
+    transition: all 0.7s ease 0s;
+    border: 2px solid #0F110C;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+input:focus{
+    outline: none;
+
+    transition: all 0.7s ease 0s;
+    border: 2px solid #B39750;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:disabled {
+    background-color: #FFB900;
+    border-color: #FFB900;
+    color: #FFB900;
+    cursor: default;
+}
+
+button:disabled:hover {
+    background-color: #FFB900;
+    border-color: #FFB900;
+    color: #FFB900;
+    cursor: default;
+}
+
+.color-black {
+    color: #0F110C;
+}
+
+.color-gold {
+    color: #FFB900;
+}
+
+.color-white {
+    color: #F5F1ED;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.left {
+    text-align: left;
+}
+
+.margin-bottom {
+    margin-bottom: 52px;
+}
+
+.margin-bottom-2x {
+    margin-bottom: 104px;
+}
+
+.margin-top {
+    margin-top: 52px;
+}
+
+.container-big {
+    position: relative;
+    margin: auto;
+    max-width: 960px;
+}
+
+.container-small {
+    position: relative;
+    margin: auto;
+    max-width: 460px;
+}
+
+.container-logo {
+    position: absolute;
+    top: 24px;
+    left: calc(50% - 80px);
+}
+
+.container-media {
+    height: 100%;
+    padding: 52px;
+}
+
+.error-container {
+    line-height: 104px;
+    height: 104px;
+    color: #D34B4D;
+}
+
+.error {
+    outline: none;
+
+    transition: all 0.7s ease 0s;
+    border: 2px solid #D34B4D;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#group-error {
+    border: 0;
+}
+
+.button {
+    display: block;
+    padding: 12px 24px;
+    width: 304px;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 0;
+    border: 2px solid #FFB900;
+    background: #FFB900;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 5px;
+}
+
+.button-white:hover {
+    background: none;
+    color: #F5F1ED;
+}
+
+.button-black:hover {
+    background: none;
+    color: #0F110C;
+}
+
+.menu-button {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+}
+
+.menu-button:hover, .menu-button:focus {
+    color: white;
+    transition: all 0.7s ease 0s;
+}
+
+.quantity-button {
+    border-radius: 50%;
+    border: 2px solid #B39750;
+    background: #B39750;
+    color: #F5F1ED;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+
+    padding: 12px 15px;
+}
+
+.quantity-button:hover {
+    background: none;
+    color: #B39750;
+    transition: all 0.7s ease 0s;
+}
+
+.quantity {
+    margin: 52px;
+
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.index-logo {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    left: 24px;
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 44px;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(../images/logo.svg);
+    mask-image: url(../images/logo.svg);
+    transition: all 0.7s ease 0s;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 44px;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(../images/logo.svg);
+    mask-image: url(../images/logo.svg);
+    transition: all 0.7s ease 0s;
+}
+
+.messanger {
+    display: block;
+    margin: auto;
+    width: 52px;
+    height: 52px;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(../images/messenger.svg);
+    mask-image: url(../images/messenger.svg);
+    transition: all 0.7s ease 0s; 
+}
+
+.messanger:hover {
+    background-color: #FFB900;
+    transition: all 0.7s ease 0s;
+}
+
+.logo:hover {
+    background-color: #ffffff;
+    transition: all 0.7s ease 0s;
+}
+
+.logo-white {
+    background-color: #F5F1ED;
+}
+
+.logo-black {
+    background-color: #0F110C;
+}
+
+.overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    background-color: #FFB900;
+    overflow-x: hidden;
+}
+
+.container-overlay {
+    position: relative;
+    opacity: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.menu-link {
+    padding: 0 12px;
+    color: #0F110C;
+    transition: all 0.7s ease 0s;
+}
+
+.menu-link:hover {
+    color: #ffffff;
+    transition: all 0.7s ease 0s;
+}
+
+.poster {
+    color: #F5F1ED;
+    background-color: #F5F1ED;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.poster::before {
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.poster .link {
+    display: block;
+    color: #F5F1ED;
+    transition: all 0.7s ease 0s;
+}
+
+.poster .link:hover {
+    color: #B39750;
+    transition: all 0.7s ease 0s;
+}
+
+.container-media iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.slider .fp-controlArrow.fp-next {
+    display: block;
+    margin-right: 52px;
+    border-right: 4px solid #F5F1ED;
+    border-bottom: 4px solid #F5F1ED;
+    border-left: none;
+    border-top: none;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+    transition: all 0.7s ease 0s;
+}
+
+.slider .fp-controlArrow.fp-prev {
+    display: block;
+    margin-left: 52px;
+    border-right: none;
+    border-bottom: none;
+    border-left: 4px solid #F5F1ED;
+    border-top: 4px solid #F5F1ED;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-45deg);
+    transition: all 0.7s ease 0s;
+}
+
+.slider .fp-controlArrow.fp-next:hover {
+    border-right: 4px solid #B39750;
+    border-bottom: 4px solid #B39750;
+    transition: all 0.7s ease 0s;
+}
+
+.slider .fp-controlArrow.fp-prev:hover {
+    border-left: 4px solid #B39750;
+    border-top: 4px solid #B39750;
+    transition: all 0.7s ease 0s;
+}
+
+.footer img {
+    width: 250px;
+    margin: 26px;
+}
+
+.footer a:hover {
+    opacity: 0.5;
+    transition: all 0.7s ease 0s;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    margin-right: -52px;
+    margin-top: -150px;
+    transform: rotate(-90deg);
+}

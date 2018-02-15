@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="53px" viewBox="0 0 52 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>Messenger icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25.9983546,0 C11.6398317,0 0,10.9213085 0,24.3935154 C0,32.0701628 3.78058106,38.9175794 9.68882739,43.3890755 L9.68882739,52.6899986 L18.5410299,47.7668987 C20.9034895,48.4294272 23.4062753,48.7870353 25.9983546,48.7870353 C40.3568775,48.7870353 51.9967092,37.8657334 51.9967092,24.3935154 C51.9967092,10.9213085 40.3568775,0 25.9983546,0 L25.9983546,0 Z M28.5820386,32.8499419 L21.9613409,25.6945083 L9.04290585,32.8499419 L23.2531883,17.5633329 L30.0353683,24.7187664 L42.7923275,17.5633329 L28.5820386,32.8499419 L28.5820386,32.8499419 Z" id="path-1"></path>
+    </defs>
+    <g id="symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Messenger-icon">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <polygon id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)" points="-5.54631564 -5.54631564 57.5430248 -5.54631564 57.5430248 58.2363143 -5.54631564 58.2363143"></polygon>
+        </g>
+    </g>
+</svg>

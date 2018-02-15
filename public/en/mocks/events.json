@@ -1,0 +1,68 @@
+{
+  "events": [
+    {
+      "id" : 1,
+      "main": {
+        "active": true,
+        "alias": "jazz-wine",
+        "date": "25 и 26 февраля",
+        "time": "19:00",
+        "place": "в клубе Sentrum (ул. Шота Руставели, 11)",
+        "title": "Вечер джаза и глинтвейна",
+        "subtitle": "Музыка 30-х и ароматный глинтвейн",
+        "header": "images/headers/header1.png",
+        "poster": "images/posters/poster1.png"
+      },
+      "saleLinks": [
+        {
+          "date": "25 февраля",
+          "time": "20:00",
+          "link": "https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1111219297"
+
+        },
+        {
+          "date": "26 февраля",
+          "time": "19:00",
+          "link": "https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1124972233"
+        }
+      ],
+      "sponsors" : [
+        {
+          "link": "http://svitloconcert.com/",
+          "logo": "images/sponsors/ararat.png",
+          "title": "ТМ арарат"
+        },
+        {
+          "link": "http://movie.tv",
+          "logo": "./images/sponsors/movie.png",
+          "title": "Балтика"
+        }
+      ],
+      "description": {
+        "title": "Title",
+        "description": "text"
+      },
+      "cards": [
+        {
+          "imgUrl": "images/cards/card1.png",
+          "name": "оркестр",
+          "title": "Виртуозы Киева",
+          "description": "text"
+        },
+        {
+          "imgUrl": "images/cards/card2.png",
+          "name": "что-то",
+          "title": "кто-то",
+          "description": "text"
+        }
+      ],
+      "media": {
+        "src": "https://www.youtube.com/embed/m7OaER54bic"
+      },
+      "slider": [
+        "images/posters/poster6.png",
+        "images/posters/poster6.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+@media (max-width: 500px) {
+    html, body {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    h3 {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 5px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 24px;
+    }
+
+    .margin-bottom-2x {
+        margin-bottom: 48px;
+    }
+
+    .margin-top {
+        margin-top: 24px;
+    }
+
+    .button {
+        padding: 12px 24px;
+        width: 250px;
+
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 5px;
+    }
+
+    .xs-hidden {
+        display: none;
+    }
+
+    .container-small {
+        padding: 24px;
+    }
+
+    .container-logo {
+        top: 12px;
+        left: calc(50% - 73px);
+    }
+
+    .index-logo {
+        top: 12px;
+        left: 12px;
+        width: 44px;
+        height: 44px;
+        -webkit-mask-image: url(../images/logo-xs.svg);
+        mask-image: url(../images/logo-xs.svg);
+    }
+
+    .menu-button {
+        top: 12px;
+        right: 12px;
+    }
+
+    .logo {
+        width: 146px;
+        height: 40px;
+    }
+
+    .container-media {
+        height: 100%;
+        padding: 24px;
+    }
+
+    .error-container {
+        line-height: 48px;
+        height: 48px;
+    }
+
+    .quantity {
+        margin: 24px;
+    }
+
+    .slider .fp-controlArrow.fp-next {
+        margin-right: 24px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .slider .fp-controlArrow.fp-prev {
+        margin-left: 24px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer img {
+        margin: 12px;
+    }
+
+    .footer .copyright {
+        font-size: 10px;
+        margin-top: -100px;
+    }
+}

@@ -1,0 +1,125 @@
+<div class="container-logo margin-bottom">
+    <a href="/index.html" class="logo logo-black"></a>
+</div>
+
+<button id="form-close" class="menu-button color-black"><i class="fa fa-close fa-3x"></i></button>
+    <div class="container-overlay">
+        <form id="form" name="form" action="" class="container-small">
+            <h3 class="margin-bottom uppercase">Заполните форму</h3>
+
+            <input id="name"  type="text"  name="name"  placeholder="Имя">
+            <input id="email" type="email" name="email" placeholder="Электронная почта">
+            <input id="phone" type="tel"   name="phone" placeholder="+380(XX)XXX-XXXX">
+
+            <div class="error-container">
+                <div class="error-text"></div>
+            </div>
+
+            <button id="button-submit" class="button button-black uppercase">купить билеты</button>
+        </form>
+    </div>
+
+<script>
+    $(document).ready(function() {
+        $('#phone').mask('+99(999)999-9999');
+
+        var validationRules = {
+            name: {
+                required: true
+            },
+            phone: {
+                required: true,
+                minlength: 16
+            },
+            email: {
+                required: true,
+                email: true
+            }
+        };
+
+        var errorMessages = {
+            name: 'Упс, ошибочка',
+            phone: {
+                required: 'Упс, ошибочка',
+                minlength: 'Упс, ошибочка'
+            },
+            email: 'Упс, ошибочка'
+        };
+
+        $('form[name="form"]').validate({
+            rules: validationRules,
+            messages: errorMessages,
+            groups: {
+                group: 'name phone email'
+            },
+            errorElement : 'div',
+            errorLabelContainer: '.error-text',
+            submitHandler: function(form) {
+                window.cart.consumer = {
+                    name:  $('#name').val(),
+                    email: $('#email').val(),
+                    phone: $('#phone').val()
+                };
+
+                var req = new XMLHttpRequest();
+                var url = 'https://us-central1-svitlo-9a81a.cloudfunctions.net/addOrder';
+
+                req.onload = function() {
+                    if (req.status === 400 || req.status === 401) {
+                        console.log('Invalid username or password');
+                        return
+                    }
+
+                    if (req.status !== 200) {
+                        console.log('Invalid response from Firebase Cloud Function ' + req.status);
+                        return
+                    }
+                };
+
+                req.onerror = function() {
+                    console.log('Network error in Firebase Cloud Function call see developer console for details');
+                };
+
+                req.open('POST', url, true);
+                req.setRequestHeader('Content-Type', 'application/json');
+                req.send(JSON.stringify(window.cart));
+
+                /*
+                $('.container-overlay').animate({
+                    opacity: '0'
+                }, 500, function () {
+                    $('#form').animate({
+                        height: '0%'
+                    }, 500, function () {
+                        document.getElementById('form-close').style.display = 'none';
+                        //form.submit();
+
+                        $.ajax({
+                            url: 'https://us-central1-svitlo-9a81a.cloudfunctions.net/addOrder',
+                            type: 'POST',
+                            data: JSON.stringify(window.cart),
+                            contentType: 'application/json; charset=utf-8',
+                            dataType: 'json'
+                        });
+                    });
+                });
+                */
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#form-close').click(function () {
+            $('.container-overlay').animate({
+                opacity: '0'
+            }, 500, function () {
+                $('#form').animate({
+                    height: '0%'
+                }, 500, function () {
+                    document.getElementById('form-close').style.display = 'none';
+                });
+            });
+        });
+    });
+
+</script>

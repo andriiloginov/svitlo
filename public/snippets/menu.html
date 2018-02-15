@@ -1,0 +1,83 @@
+<div class="container-logo margin-bottom">
+    <a href="/index.html" class="logo logo-black"></a>
+</div>
+
+<button id="menu-button-close" class="menu-button color-black"><i class="fa fa-close fa-3x"></i></button>
+
+<div class="container-overlay">
+    <a class="menu-link uppercase margin-bottom" href="/index.html">
+        <h2>афиша</h2>
+    </a>
+    <a class="menu-link uppercase margin-bottom" href="/about.html">
+        <h2>о нас</h2>
+    </a>
+    <!--
+    <a class="menu-link uppercase margin-bottom" href="http://blog.svitloconcert.com/">
+        <h2>блог</h2>
+    </a>
+    -->
+    <a class="menu-link uppercase margin-bottom" href="/radio/index.html">
+        <h2>радио</h2>
+    </a>
+
+    <h3 class="margin-bottom margin-top uppercase">Социальные сети</h3>
+
+    <a class="menu-link" href="https://www.facebook.com/SvitloConcert/" target="_blank">
+        <i class="fa fa-facebook fa-2x"></i>
+    </a>
+    <!--
+    <a class="menu-link" href="https://vk.com/svitloconcert" target="_blank">
+        <i class="fa fa-vk fa-2x"></i>
+    -->
+    </a>
+    <a class="menu-link" href="https://www.youtube.com/c/svitloconcert" target="_blank">
+        <i class="fa fa-youtube fa-2x"></i>
+    </a>
+    <a class="menu-link" href="https://www.instagram.com/svitloconcert/" target="_blank">
+        <i class="fa fa-instagram fa-2x"></i>
+    </a>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#menu-button-open').click(function () {
+            $('#menu').animate({
+                height: '100%'
+            }, 500, function () {
+                document.getElementById('menu-button-close').style.display = 'block';
+                document.getElementById('menu-button-open').style.display = 'none';
+
+                $('.container-overlay').animate({
+                    opacity: '1'
+                }, 500, function () {
+                });
+            });
+        });
+
+        $('#menu-button-close').click(function () {
+            $('.container-overlay').animate({
+                opacity: '0'
+            }, 500, function () {
+
+                $('#menu').animate({
+                    height: '0%'
+                }, 500, function () {
+                    document.getElementById('menu-button-close').style.display = 'none';
+                    document.getElementById('menu-button-open').style.display = 'block';
+
+                });
+            });
+        });
+
+        $('.menu-link').click(function () {
+            event.preventDefault();
+            var href = this.href;
+
+            $('#menu').animate({
+                opacity: '0'
+            }, 500, function () {
+                window.location = href;
+            });
+        });
+    });
+</script>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Svitlo Concert</title>
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"              content="width=device-width, initial-scale=1">
+    <meta name="description"           content="Concert agency">
+
+    <!-- Open Graph -->
+    <meta property="fb:app_id"      content="587817868081899" />
+    <meta property="og:url"         content="https://svitloconcert.com" />
+    <meta property="og:type"        content="website" />
+    <meta property="og:site_name"   content="Svitlo Concert" />
+    <meta property="og:title"       content="Svitlo Concert" />
+    <meta property="og:description" content="Concert agency" />
+    <meta property="og:image"       content="https://svitloconcert.com/images/headers/header19.jpg" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/xs-size.css">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.fullpage.min.css">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TL4RKH');
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TL4RKH"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+
+    <a href="index.html" class="index-logo logo-white"></a>
+
+    <!-- Menu -->
+    <button id="menu-button-open" class="menu-button color-white"><i class="fa fa-bars fa-3x"></i></button>
+    <div id="menu" class="overlay"></div>
+
+    <!-- Full page -->
+    <div id="fullpage">
+
+
+
+
+        <!-- section -->
+        <div class="section poster text-center" style="background-image: url('images/headers/header16.jpg');">
+            <div class="container-big">
+                <h3 class="margin-bottom uppercase">Aug 12, 20:00<br>Gryshko National Botanical Garden</h3>
+                <h1><a class="link margin-bottom" href="events/jazzvsadu/">Jazz in Garden</a></h1>
+                <div class="margin-bottom">Big band of the National Presidential Orchestra</div>
+
+                <a target="_blank"
+                   class="button button-white margin-bottom uppercase"
+                   href="https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1275237483">buy tickets</a>
+            </div>
+        </div>
+
+        
+        <!-- section -->
+        <div class="section poster text-center" style="background-image: url('images/headers/header17.jpg');">
+            <div class="container-big">
+                <h3 class="margin-bottom uppercase">Sept 2, 20:00<br>Kiev Pechersk Lavra</h3>
+                <h1><a class="link margin-bottom" href="events/lavra/">Classics in Lavra</a></h1>
+                <div class="margin-bottom">Kyiv Virtuosi Symphonic Orchestra, «Dumka» Chorus,<br>conductor Dmitry Yablonsky</div>
+
+                <a target="_blank"
+                   class="button button-white margin-bottom uppercase"
+                   href="https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1240361770">buy tickets</a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- two dates menu -->
+    <div id="dates" class="overlay">
+        <div class="container-logo margin-bottom">
+            <a href="/index.html" class="logo logo-black"></a>
+        </div>
+
+        <button id="menu-dates-close" class="menu-button color-black"><i class="fa fa-close fa-3x"></i></button>
+
+        <div class="container-overlay">
+            <h3 class="margin-bottom uppercase">с нетерпением<br>ждем встречи с вами</h3>
+
+            <h1 class="margin-bottom">Выберите дату</h1>
+
+            <div class="margin-bottom">
+                <a target="_blank"
+                   role="button"
+                   class="button button-white margin-bottom uppercase"
+                   href="https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1157038359">8 апреля</a>
+            </div>
+
+            <div class="margin-bottom">
+                <a target="_blank"
+                   role="button"
+                   class="button button-white margin-bottom uppercase"
+                   href="https://arm.frontmanager.com.ua/PublicAPI/WidgetStep1.aspx?__uid=QPBw3ezddEGQXq5RvUwq6A&event=1157039065">9 апреля</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#menu-dates-open').click(function () {
+                $('#dates').animate({
+                    height: '100%'
+                }, 500, function () {
+                    document.getElementById('menu-dates-close').style.display = 'block';
+
+                    $('.container-overlay').animate({
+                        opacity: '1'
+                    }, 500, function () {
+                    });
+                });
+            });
+
+            $('#menu-dates-close').click(function () {
+
+                $('.container-overlay').animate({
+                    opacity: '0'
+                }, 500, function () {
+
+                    $('#dates').animate({
+                        height: '0%'
+                    }, 500, function () {
+                        document.getElementById('menu-dates-close').style.display = 'none';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
